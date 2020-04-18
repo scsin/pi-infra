@@ -8,7 +8,8 @@ ansible_python_interpreter=/usr/bin/python3
 [local]
 127.0.0.1
 
-[ec2hosts]
+[aws]
+10.10.1.188
 
 [aws_ec2:vars]
 ansible_user=ubuntu
