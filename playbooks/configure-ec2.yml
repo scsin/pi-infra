@@ -20,8 +20,11 @@
         update_cache: yes
       vars:
         packages:
+        - git
         - python3
         - python3-pip
+        - docker-ce
+        - amazon-linux-extras
         - lvm2
         - software-properties-common
         - ntpdate
@@ -35,6 +38,6 @@
         - boto
         - boto3
         - botocore
+        - docker-compose
         - ansible
         - awscli
-    
