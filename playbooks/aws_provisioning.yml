@@ -5,7 +5,7 @@
     - vars/aws_credentials.yml
 
   vars:
-    projeto: devops
+    projeto: GitGirls 
     AWS_access_key: "{{ AWSAccessKeyId }}"
     AWS_secret_key: "{{ AWSSecretKey }}"
     instance_type: t2.micro
@@ -13,11 +13,11 @@
     image_ami: ami-07ebfd5b3428b6f4d
     KeyPairDev: "{{ projeto }}-key"
     region: us-east-1
-    count: 1
+    count: 3 
     vpc_cidr_block: 10.0.0.0/16
     cidr_block: 10.0.1.16/28
     vpc_name: "{{ projeto }}-vpc"
-    name_service: app-node01
+    name_service: Homolog 
     route_tag: "{{ projeto }}-route"
     sub_tag: "{{ projeto }}-subnet"
 
@@ -94,11 +94,44 @@
             - proto: all
               cidr_ip: 0.0.0.0/0
 
-    - name: Launch the new EC2 Instance 22
+    - name: Launch the new EC2 Instance - Homolog 
       ec2_instance:
         aws_access_key: "{{ AWS_access_key }}"
         aws_secret_key: "{{ AWS_secret_key }}"
-        name: "{{ name_service }}"
+        name: "Homolog"
+        key_name: "{{ KeyPairDev }}"
+        security_group: "{{ security_group }}"
+        vpc_subnet_id: "{{ vpc_subnet_ids }}"
+        instance_type: "{{ instance_type }}"
+        image_id: "{{ image_ami }}"
+        network:
+            assign_public_ip: true
+        state: running
+        region: "{{ region }}"
+      register: ec2
+
+    - name: Launch the new EC2 Instance - Prod 
+      ec2_instance:
+        aws_access_key: "{{ AWS_access_key }}"
+        aws_secret_key: "{{ AWS_secret_key }}"
+        name: "Prod"
+        key_name: "{{ KeyPairDev }}"
+        security_group: "{{ security_group }}"
+        vpc_subnet_id: "{{ vpc_subnet_ids }}"
+        instance_type: "{{ instance_type }}"
+        image_id: "{{ image_ami }}"
+        network:
+            assign_public_ip: true
+        state: running
+        region: "{{ region }}"
+      register: ec2
+
+
+    - name: Launch the new EC2 Instance - Jenkins 
+      ec2_instance:
+        aws_access_key: "{{ AWS_access_key }}"
+        aws_secret_key: "{{ AWS_secret_key }}"
+        name: "Jenkins"
         key_name: "{{ KeyPairDev }}"
         security_group: "{{ security_group }}"
         vpc_subnet_id: "{{ vpc_subnet_ids }}"
