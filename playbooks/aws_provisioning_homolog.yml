@@ -5,7 +5,7 @@
     - vars/aws_credentials.yml
 
   vars:
-    projeto: devops
+    projeto: pi-infra-homolog
     AWS_access_key: "{{ AWSAccessKeyId }}"
     AWS_secret_key: "{{ AWSSecretKey }}"
     instance_type: t2.micro
@@ -20,8 +20,6 @@
     name_service: app-node01
     route_tag: "{{ projeto }}-route"
     sub_tag: "{{ projeto }}-subnet"
-
-
 
   tasks:
     - name: Amazon EC2 | Create Key Pair
@@ -139,4 +137,3 @@
         port: 22 
         state: started 
       with_items: "{{ ec2.instances }}"
-
