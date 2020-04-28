@@ -49,3 +49,7 @@
     - name: Download required roles jenkins
       local_action: command ansible-galaxy install geerlingguy.jenkins 
       become: false
+
+
+
+
