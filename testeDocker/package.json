@@ -1,0 +1,21 @@
+{
+   "name": "getintodevops-hellonode",
+   "version": "1.0.0",
+   "main": "main.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node main.js"
+   }, 
+   "repository":{
+      "type": "git",
+      "url": "https://github.com/getintodevops/hellonode/"
+   },
+   "keywords": [
+      "node",
+      "docker",
+      "dockerfile"
+   ],
+  "author": "say.karina@hotmail.com",
+  "license": "ISC"  
+}
+
