@@ -1,4 +1,4 @@
-# Projeto_Integrador_Academia_Neon-GitGirls
+# Projeto Integrador_Academia_Neon - GitGirls
 
 Projeto em Grupo - apresentação no dia 05/05/2020
 
