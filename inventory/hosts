@@ -1,6 +1,6 @@
 [local:vars]
-ansible_user=ubuntu
-ansible_sudo_pass=ubuntu
+ansible_user=karina
+ansible_sudo_pass=karina
 ansible_connection=local 
 ansible_python_interpreter=/usr/bin/python3
 
@@ -8,11 +8,11 @@ ansible_python_interpreter=/usr/bin/python3
 [local]
 127.0.0.1
 
-[aws]
+[aws_ec2]
 10.10.1.188
 
 [aws_ec2:vars]
 ansible_user=ubuntu
 ansible_connection=ssh
-ansible_ssh_private_key_file=./devops-key.pem
+ansible_ssh_private_key_file=./GitGirls-key.pem
 ansible_python_interpreter=/usr/bin/python3

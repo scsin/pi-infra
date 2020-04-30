@@ -72,6 +72,9 @@
               from_port: 8080
               to_port: 8080
               cidr_ip: 0.0.0.0/0
+            - proto: tcp
+              from_port: 8030
+              to_port: 8030
         rules_egress:
             - proto: all
               cidr_ip: 0.0.0.0/0
