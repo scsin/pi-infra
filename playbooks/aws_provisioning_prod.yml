@@ -5,21 +5,21 @@
     - vars/aws_credentials.yml
 
   vars:
-    projeto: pi-infra-prod
+    projeto: piinfraprod
     AWS_access_key: "{{ AWSAccessKeyId }}"
     AWS_secret_key: "{{ AWSSecretKey }}"
     instance_type: t2.micro
-    security_group: "{{ projeto-infra-prod }}-ws-sg"
+    security_group: "{{ projeto }}-ws-sg"
     image_ami: ami-07ebfd5b3428b6f4d
-    KeyPairDev: "{{ projeto-infra-prod }}-key"
+    KeyPairDev: "{{ projeto }}-key"
     region: us-east-1
     count: 1
     vpc_cidr_block: 10.0.0.0/16
     cidr_block: 10.0.1.16/28
-    vpc_name: "{{ projeto-infra-prod }}-vpc"
+    vpc_name: "{{ projeto }}-vpc"
     name_service: app-node01
-    route_tag: "{{ projeto-infra-prod }}-route"
-    sub_tag: "{{ projeto-infra-prod }}-subnet"
+    route_tag: "{{ projeto }}-route"
+    sub_tag: "{{ projeto }}-subnet"
 
   tasks:
     - name: Amazon EC2 | Create Key Pair
