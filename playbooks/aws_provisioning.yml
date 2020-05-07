@@ -140,8 +140,8 @@
         mode: create
         region: us-east-1
       loop:
-        - dh-pi-devops-dev
-        - dh-pi-devops-prod
+        - dh-pi-gitgirls-isadora-dev
+        - dh-pi-gitgirls-isadora-prod
 
     - name: Create S3
       s3_bucket:
@@ -168,5 +168,5 @@
                 'arn:aws:s3:::{{item}}'
               ]
       loop:
-        - dh-pi-devops-dev
-        - dh-pi-devops-prod
+      - dh-pi-gitgirls-isadora-dev
+      - dh-pi-gitgirls-isadora-prod
