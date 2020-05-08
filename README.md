@@ -1,4 +1,11 @@
-Projeto Integrador - GitGirls
+# Projeto Integrador_Academia_Neon - GitGirls
+Projeto em Grupo - apresentação no dia 15/05/2020
+
+História do usuário: Uma empresa Projetos SA desenvolveu um novo sistema na Web no NJJ para disponibilizar um formulário de envio de imagens para um bucket da AWS S3. O acesso será feito pela internet pública.
+
+* Prints do Jenkins
+* Prints do healthcheck
+* Prints do arquivo salvo no bucket
 
 Jenkins:
 ![Jenkins_pipeline](https://dh-pi-gitgirls-dev.s3.amazonaws.com/Readme/Jenkins.png)
