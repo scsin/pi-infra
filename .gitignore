@@ -1,3 +1,7 @@
+# Credenciais
+playbook/vars/aws_credentials.yml
+
+
 # Logs
 .vagrant/*
 tmp.vagrant
