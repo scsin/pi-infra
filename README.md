@@ -1,11 +1,10 @@
-# Projeto Integrador_Academia_Neon - GitGirls
-Projeto em Grupo - apresentação no dia 15/05/2020
+# Projeto Integrador Academia Neon - GitGirls
+Projeto em Grupo - apresentação no dia 01/06/2020
 
-História do usuário: Uma empresa Projetos SA desenvolveu um novo sistema na Web no NJJ para disponibilizar um formulário de envio de imagens para um bucket da AWS S3. O acesso será feito pela internet pública.
+## Objetivo
+Executar o [App que envia fotos](https://github.com/bgsouza/digitalhouse-devops-app.git/) em duas máquinas, de produção e homologação, de forma automatizada, através do Jenkins.
 
-* Prints do Jenkins
-* Prints do healthcheck
-* Prints do arquivo salvo no bucket
+### Prints da aplicação em funcionamento
 
 Jenkins:
 ![Jenkins_pipeline](https://dh-pi-gitgirls-dev.s3.amazonaws.com/Readme/Jenkins.png)
