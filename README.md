@@ -2,9 +2,15 @@
 Projeto em Grupo - apresentação no dia 01/06/2020
 
 ## Objetivo
-Executar o [App que envia fotos](https://github.com/bgsouza/digitalhouse-devops-app.git/) em duas máquinas, de produção e homologação, de forma automatizada, através do Jenkins.
+Executar o [App que envia fotos](https://github.com/bgsouza/digitalhouse-devops-app.git/) para Buckets S3 em duas máquinas, de produção e homologação, de forma automatizada, através do Jenkins.
 
-### Prints da aplicação em funcionamento
+## Estrutura
+A estrutura será criada na AWS através de playbooks Ansible, da seguinte forma:
+- Três máquinas ec2, sendo uma para o Jenkins, uma para Homologação e outra para Produção;
+- Dois buckets S3, um para Homologação e outra para Produção;
+- Repositório ECR, para armazenamento de imagens.
+
+## Prints da aplicação em funcionamento
 
 Jenkins:
 ![Jenkins_pipeline](https://dh-pi-gitgirls-dev.s3.amazonaws.com/Readme/Jenkins.png)
